@@ -8,8 +8,6 @@ import Exception.CrimeException;
 
 public class DBUtil {
 
-	
-		
 
 		public static Connection provideConnection(){
 			
@@ -26,16 +24,15 @@ public class DBUtil {
 			
 			
 			try {
-				DriverManager.getConnection(url, "root", "root");
+				conn=DriverManager.getConnection(url, "root", "root");
+				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			
-						
+				new CrimeException("DATABASE NOT FOUND");
 			}
-			
-			
-			
+						
 			return conn;
 			
 		}
