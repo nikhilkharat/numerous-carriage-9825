@@ -17,6 +17,8 @@ public interface CrimeDao {
 	
 	public String insertCriminals(CriminalDetails criminalDetails) throws CrimeException, SQLException;
 	
+	public List<CriminalDetails> getAllCriminalDetails() throws CrimeException, SQLException;
+	
 //	public String insertPoliceStationDetails(PoliceStationDetails policeStation) throws CrimeException, SQLException;
 //	
 //	public List<PoliceStationDetails> getAllPoliceStationDetails() throws CrimeException, SQLException;

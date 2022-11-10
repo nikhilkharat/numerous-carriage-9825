@@ -114,6 +114,42 @@ public class CrimeDaoImpl implements CrimeDao {
 		
 		return message;
 	}
+	
+	@Override
+	public List<CriminalDetails> getAllCriminalDetails() throws CrimeException, SQLException {
+		// TODO Auto-generated method stub
+		List<CriminalDetails> criminalDetails= new ArrayList<>();
+		
+		try(Connection conn= DBUtil.provideConnection()) {
+			
+			PreparedStatement ps= conn.prepareStatement("select * from criminaldetails");
+			
+			ResultSet rs =ps.executeQuery();
+			
+			while(rs.next()) {
+				
+				
+				String criminalname= rs.getString("CriminalName");
+				int age=rs.getInt("Age");
+				String gender=rs.getString("Gender");
+				String identity=rs.getString("Identity");
+			
+		
+				
+				
+				CriminalDetails cd =new CriminalDetails(criminalname, age, gender, identity);
+				criminalDetails.add(cd);
+				
+			}
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			throw new CrimeException(e.getMessage());
+		}
+		
+		
+		return criminalDetails;
+	}
 //
 //	@Override
 //	public String insertPoliceStationDetails(PoliceStationDetails policeStation) throws CrimeException, SQLException {
@@ -209,6 +245,8 @@ public class CrimeDaoImpl implements CrimeDao {
 //		
 //		return policeStationWiseCrime;
 //	}
+
+	
 
 	
 
