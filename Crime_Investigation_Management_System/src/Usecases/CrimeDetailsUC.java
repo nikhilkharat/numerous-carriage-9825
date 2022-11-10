@@ -33,18 +33,34 @@ public class CrimeDetailsUC {
 		System.out.println("Enter Victims");
 		String victim= sc.next();
 				
-		System.out.println("Enter Criminal Name");
-		String criminalname= sc.next();
+		
 		
 		
 		CrimeDao dao= new CrimeDaoImpl();
 		
-		CrimeDetails crimeDetails= new CrimeDetails(crimeID, crimeDate, crimePlace, crimeType, crimeDesc, victim, criminalname);
+		CrimeDetails crimeDetails= new CrimeDetails(crimeID, crimeDate, crimePlace, crimeType, crimeDesc, victim);
 		
-		String result= dao.insertCriminalRegiter(crimeDetails);
+		String result= dao.insertCrimeDetailsRegiter(crimeDetails);
 		
 		System.out.println(result);
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
