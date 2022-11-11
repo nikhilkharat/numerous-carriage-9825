@@ -2,6 +2,8 @@ package Model;
 
 import java.sql.*;
 
+import Colors.ConsoleColors;
+
 public class CrimeDetails {
 
 	private int CrimeId;

@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
+import Colors.ConsoleColors;
 import Dao.CrimeDao;
 import Dao.CrimeDaoImpl;
 import Exception.CrimeException;
@@ -20,7 +21,7 @@ public class ListCriminalDetailsUC {
 		
 		try {
 			List<CriminalDetails> criminaldetails= dao.getAllCriminalDetails();
-			criminaldetails.forEach(s->System.out.println(s));
+			criminaldetails.forEach(s->System.out.println(ConsoleColors.FOREST_GREEN_BACKGROUND+s));
 		} catch (CrimeException e) {
 			// TODO Auto-generated catch block
 			

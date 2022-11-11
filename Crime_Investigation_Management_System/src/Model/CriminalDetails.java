@@ -1,5 +1,7 @@
 package Model;
 
+import Colors.ConsoleColors;
+
 public class CriminalDetails {
 	
 	private String CriminalName;
@@ -53,7 +55,7 @@ public class CriminalDetails {
 
 	@Override
 	public String toString() {
-		return "CriminalDetails [CriminalName=" + CriminalName + ", Age=" + Age + ", Gender=" + Gender + ", Identity="
+		return "CriminalDetails [CriminalName=" +CriminalName + ", Age=" + Age + ", Gender=" + Gender + ", Identity="
 				+ Identity + "]";
 	}
 	

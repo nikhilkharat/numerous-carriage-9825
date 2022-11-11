@@ -13,6 +13,17 @@ import Model.CriminalDetails;
 import Utility.DBUtil;
 
 public class CrimeDaoImpl implements CrimeDao {
+	
+	@Override
+	public String adminLogin(String username, String password) {
+			String message = "Invalid username or password";
+		
+		if (username.equals(CrimeDao.username) && password.equals(CrimeDao.password)) {
+			 message = "Login Successfull";
+		}
+		
+		return message;
+	}
 
 	@Override
 	public String insertCrimeDetailsRegiter(CrimeDetails crimedetails) throws CrimeException, SQLException  {
@@ -150,6 +161,53 @@ public class CrimeDaoImpl implements CrimeDao {
 		
 		return criminalDetails;
 	}
+	
+	@Override
+	public String enrollCriminalCrime(int crimeID, String criminalName) throws CrimeException, SQLException {
+		// TODO Auto-generated method stub
+		String message="Not Enrolled Crime...";
+		
+		try(Connection conn= DBUtil.provideConnection()) {
+			
+			PreparedStatement ps1=conn.prepareStatement("select * from crimedetails where CrimeId=?");
+			
+			ps1.setInt(1, crimeID);
+			
+			ResultSet rs= ps1.executeQuery();
+			
+			if(rs.next()) {
+				PreparedStatement ps2=conn.prepareStatement("select * from criminalDetails where CriminalName=?");
+				
+				ps2.setString(1, criminalName);
+				
+				ResultSet rs1= ps2.executeQuery();
+				if (rs1.next()) {
+					
+					PreparedStatement ps3=conn.prepareStatement("insert into criminalByPoliceStation values (?,?)");
+					ps3.setInt(1, crimeID);
+					ps3.setString(2, criminalName);
+					
+					int x= ps3.executeUpdate();
+					if (x>0)
+						message="Criminal Enrolled Successfully";
+					
+				}else
+					throw new CrimeException("Criminal Not Found");
+			}else
+				throw new CrimeException("CrimeID Not Found");
+			
+			
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			throw new CrimeException(e.getMessage());
+		}
+		
+		
+		
+		return message;
+	}
 //
 //	@Override
 //	public String insertPoliceStationDetails(PoliceStationDetails policeStation) throws CrimeException, SQLException {
@@ -245,6 +303,10 @@ public class CrimeDaoImpl implements CrimeDao {
 //		
 //		return policeStationWiseCrime;
 //	}
+
+	
+
+	
 
 	
 
