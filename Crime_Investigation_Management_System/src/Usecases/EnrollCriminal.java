@@ -3,13 +3,14 @@ package Usecases;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import Colors.ConsoleColors;
 import Dao.CrimeDao;
 import Dao.CrimeDaoImpl;
 import Exception.CrimeException;
 
 public class EnrollCriminal {
 
-	public static void main(String[] args) throws CrimeException {
+	public static void main() throws CrimeException {
 		// TODO Auto-generated method stub
 
 		Scanner sc= new Scanner(System.in);
@@ -24,7 +25,7 @@ public class EnrollCriminal {
 		
 		try {
 			String result= dao.enrollCriminalCrime(crimeID, criminalName);
-			System.out.println(result);
+			System.out.println(ConsoleColors.BROWN+result);
 		}  catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,0 +1,52 @@
+
+
+(================CrimeDaoImpl=========================)
+
+1.Insert Value in Crime Details
+-> "insert into crimedetails values (?,?,?,?,?,?)"
+
+
+2. For All Crime Details
+->"select * from crimedetails"
+
+
+3. Insert Value in Criminal Details
+->"insert into criminalDetails values (?,?,?,?,?)"
+
+
+4. For All Criminal Details
+-> "select * from criminalDetails"
+
+
+5. Enroll Crime to Criminal By CrimeId and Criminal Name
+-> "select * from crimedetails where CrimeId=?"
+	"select * from criminalDetails where CriminalName=?"
+	"insert into criminalByPoliceStation values (?,?)"
+	
+	
+(================CriminalDaoImpl=========================)
+
+1. Criminal By Crime
+->"select c.crimeID,c.CriminalName,cd.DateOfCrime,cd.CrimePlace,cd.CrimeType from 
+CriminalByPoliceStation c INNER JOIN CrimeDetails cd ON c.crimeID=cd.CrimeId order by c.CriminalName"
+
+
+2.Criminal By Place
+->"select c.crimeID,c.CriminalName,cd.DateOfCrime,cd.CrimePlace,cd.CrimeType from CriminalByPoliceStation c 
+INNER JOIN CrimeDetails cd ON c.crimeID=cd.CrimeId where CrimePlace=?"
+
+
+3.Criminal By Crime Type
+->"select c.crimeID,c.CriminalName,cd.DateOfCrime,cd.CrimePlace,cd.CrimeType 
+from CriminalByPoliceStation c INNER JOIN CrimeDetails cd ON c.crimeID=cd.CrimeId where CrimeType=?"
+
+
+4. Criminal By Crime in Month
+->select c.crimeID,c.CriminalName,cd.DateOfCrime,cd.CrimePlace,cd.CrimeType from CriminalByPoliceStation c INNER JOIN CrimeDetails cd ON 
+c.crimeID=cd.CrimeId group by MONTH(DateOfCrime) order by DateOfCrime asc");
+
+
+5.Criminal By Case Status
+-> "select c.crimeID,c.CriminalName,cd.DateOfCrime,cd.CrimePlace,cd.CrimeType, cr.CaseStatus from CriminalByPoliceStation c INNER JOIN CrimeDetails cd INNER JOIN criminalDetails cr 
+ON c.crimeID=cd.CrimeId AND c.CriminalName=cr.CriminalName where CaseStatus=?"
+			

@@ -10,7 +10,7 @@ import Model.CriminalDetails;
 
 public class CriminalDetailsUC {
 
-	public static void main(String[] args) throws CrimeException, SQLException {
+	public static void main() throws CrimeException, SQLException {
 		// TODO Auto-generated method stub
 
 		Scanner sc= new Scanner(System.in);
@@ -27,11 +27,14 @@ public class CriminalDetailsUC {
 		System.out.println("Enter Criminal Identity");
 		String Identity= sc.next();
 		
+		System.out.println("Enter Case Status");
+		String status= sc.next();
+		
 				
 		
 		CrimeDao dao= new CrimeDaoImpl();
 		
-		CriminalDetails criminalDetails= new CriminalDetails(crimeName, Age, Gender, Identity);
+		CriminalDetails criminalDetails= new CriminalDetails(crimeName, Age, Gender, Identity, status);
 		
 		String result= dao.insertCriminals(criminalDetails);
 		

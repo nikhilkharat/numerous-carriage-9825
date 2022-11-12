@@ -103,12 +103,13 @@ public class CrimeDaoImpl implements CrimeDao {
 		
 		try (Connection conn =DBUtil.provideConnection()) {
 			
-		PreparedStatement ps=conn.prepareStatement("insert into criminalDetails values (?,?,?,?)");
+		PreparedStatement ps=conn.prepareStatement("insert into criminalDetails values (?,?,?,?,?)");
 		
 		ps.setString(1, criminalDetails.getCriminalName());
 		ps.setInt(2, criminalDetails.getAge());
 		ps.setString(3, criminalDetails.getGender());
 		ps.setString(4, criminalDetails.getIdentity());
+		ps.setString(5, criminalDetails.getCaseStatus());
 		
 		
 		
@@ -144,11 +145,11 @@ public class CrimeDaoImpl implements CrimeDao {
 				int age=rs.getInt("Age");
 				String gender=rs.getString("Gender");
 				String identity=rs.getString("Identity");
-			
+				String status=rs.getString("CaseStatus");
 		
 				
 				
-				CriminalDetails cd =new CriminalDetails(criminalname, age, gender, identity);
+				CriminalDetails cd =new CriminalDetails(criminalname, age, gender, identity,status);
 				criminalDetails.add(cd);
 				
 			}
@@ -208,110 +209,6 @@ public class CrimeDaoImpl implements CrimeDao {
 		
 		return message;
 	}
-//
-//	@Override
-//	public String insertPoliceStationDetails(PoliceStationDetails policeStation) throws CrimeException, SQLException {
-//		// TODO Auto-generated method stub
-//		String message="Police Station Not Inserted ";
-//		
-//		try (Connection conn =DBUtil.provideConnection()) {
-//			
-//		PreparedStatement ps=conn.prepareStatement("insert into policeStationDetails values (?,?)");
-//		
-//	
-//		ps.setString(1, policeStation.getPoliceStationName());
-//		ps.setString(2, policeStation.getPoliceStationLocation());
-//	
-//		
-//		int x= ps.executeUpdate();
-//		
-//		if(x>0)
-//			message="Police Station Inserted Successfully";
-//			
-//		} catch (SQLException e) {
-//			// TODO: handle exception
-//			e.printStackTrace();
-//			System.out.println(e.getMessage());
-//		}
-//		
-//		return message;
-//	}
-//
-//	@Override
-//	public List<PoliceStationDetails> getAllPoliceStationDetails() throws CrimeException, SQLException {
-//		// TODO Auto-generated method stub
-//		List<PoliceStationDetails> policeStationDetails= new ArrayList<>();
-//		
-//		try(Connection conn= DBUtil.provideConnection()) {
-//			
-//			PreparedStatement ps= conn.prepareStatement("select * from policeStationDetails");
-//			
-//			ResultSet rs =ps.executeQuery();
-//			
-//			while(rs.next()) {
-//				
-//				String name= rs.getString("policeStationName");
-//				String location= rs.getString("policeStationLocation");
-//			
-//				
-//				PoliceStationDetails cd =new PoliceStationDetails(name, location);
-//				policeStationDetails.add(cd);
-//				
-//			}
-//		} catch (SQLException e) {
-//			// TODO: handle exception
-//			e.printStackTrace();
-//			throw new CrimeException(e.getMessage());
-//		}
-//		
-//		
-//		return policeStationDetails;
-//	}
-//
-//	@Override
-//	public List<PoliceStationWiseCrime> getPoliceStationWiseCrimeDetails(String policeStationLocation)
-//			throws CrimeException, SQLException {
-//		// TODO Auto-generated method stub
-//List<PoliceStationWiseCrime> policeStationWiseCrime= new ArrayList<>();
-//		
-//		try(Connection conn= DBUtil.provideConnection()) {
-//			
-//			PreparedStatement ps= conn.prepareStatement("select  * from policeStationwiseCrime INNER JOIN ON c.CrimePlace=p.policeStationLocation AND p.policeStationLocation=?;");
-//			ps.setString(1, policeStationLocation);
-//			
-//			ResultSet rs =ps.executeQuery();
-//			
-//			while(rs.next()) {
-//				int id= rs.getInt("CrimeId");
-//				String date=rs.getString("DateOfCrime");
-//				String place=rs.getString("CrimePlace");
-//				String type=rs.getString("CrimeType");
-//				String name= rs.getString("policeStationName");
-//				String location= rs.getString("policeStationLocation");
-//			
-//				
-//				PoliceStationWiseCrime cd1 =new PoliceStationWiseCrime(id, date, place, type, name, location);
-//				policeStationWiseCrime.add(cd1);
-//				
-//			}
-//		} catch (SQLException e) {
-//			// TODO: handle exception
-//			e.printStackTrace();
-//			throw new CrimeException(e.getMessage());
-//		}
-//		
-//		
-//		return policeStationWiseCrime;
-//	}
-
-	
-
-	
-
-	
-
-	
-
 
 
 

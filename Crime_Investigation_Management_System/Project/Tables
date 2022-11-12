@@ -19,7 +19,8 @@ create table CriminalDetails
     CriminalName varchar(20) primary key,
     Age int not null,
     Gender varchar(20) not null,
-    Identity varchar(50) not null
+    Identity varchar(50) not null,
+    CaseStatus varchar(15) not null
 
 );
 

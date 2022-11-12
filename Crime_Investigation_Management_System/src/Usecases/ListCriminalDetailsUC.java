@@ -13,7 +13,7 @@ import Model.CriminalDetails;
 
 public class ListCriminalDetailsUC {
 
-	public static void main(String[] args) throws CrimeException, SQLException  {
+	public static void main() throws CrimeException, SQLException  {
 		// TODO Auto-generated method stub
 
 		CrimeDao dao= new CrimeDaoImpl();
@@ -21,7 +21,7 @@ public class ListCriminalDetailsUC {
 		
 		try {
 			List<CriminalDetails> criminaldetails= dao.getAllCriminalDetails();
-			criminaldetails.forEach(s->System.out.println(ConsoleColors.FOREST_GREEN_BACKGROUND+s));
+			criminaldetails.forEach(s->System.out.println(ConsoleColors.ORANGE+s));
 		} catch (CrimeException e) {
 			// TODO Auto-generated catch block
 			

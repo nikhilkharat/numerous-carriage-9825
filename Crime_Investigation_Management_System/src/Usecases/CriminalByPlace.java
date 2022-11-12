@@ -1,27 +1,28 @@
 package Usecases;
 
 import java.util.List;
+import java.util.Scanner;
 
 import Colors.ConsoleColors;
 import Dao.CriminalDao;
 import Dao.CriminalDaoImpl;
 import Exception.CrimeException;
 import Model.CriminalDet;
-import Model.CriminalDetails;
 
-public class CriminalByCrime {
+public class CriminalByPlace {
 
 	public static void main() {
 		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		System.out.println(ConsoleColors.CYAN_BOLD+"Enter Area of Police Station where Crime Happened");
+		String cplace=sc.next();
 
-		
 		CriminalDao cdao= new CriminalDaoImpl();
 		
 		try {
-			List<CriminalDet> dtoss= cdao.getAllCriminalByCrime();
-			dtoss.forEach(s->System.out.println(ConsoleColors.PURPLE_BOLD+s));
+			List<CriminalDet> dtoss= cdao.getAllCriminalByPlace(cplace);
+			dtoss.forEach(s->System.out.println(ConsoleColors.CYAN_BOLD+s));
 		} catch (CrimeException e) {
-			// TODO Auto-generated catch block
 			
 			System.out.println(e.getMessage());
 		}

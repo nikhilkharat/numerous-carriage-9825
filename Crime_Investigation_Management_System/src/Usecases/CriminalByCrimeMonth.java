@@ -1,27 +1,26 @@
 package Usecases;
 
 import java.util.List;
+import java.util.Scanner;
 
 import Colors.ConsoleColors;
 import Dao.CriminalDao;
 import Dao.CriminalDaoImpl;
 import Exception.CrimeException;
 import Model.CriminalDet;
-import Model.CriminalDetails;
 
-public class CriminalByCrime {
+public class CriminalByCrimeMonth {
 
 	public static void main() {
 		// TODO Auto-generated method stub
-
 		
-		CriminalDao cdao= new CriminalDaoImpl();
+
+		CriminalDao cdao1= new CriminalDaoImpl();
 		
 		try {
-			List<CriminalDet> dtoss= cdao.getAllCriminalByCrime();
-			dtoss.forEach(s->System.out.println(ConsoleColors.PURPLE_BOLD+s));
+			List<CriminalDet> dtosss= cdao1. getAllCriminalByMonth();
+			dtosss.forEach(s->System.out.println(ConsoleColors.GREEN_BOLD+s));
 		} catch (CrimeException e) {
-			// TODO Auto-generated catch block
 			
 			System.out.println(e.getMessage());
 		}
