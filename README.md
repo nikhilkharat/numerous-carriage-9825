@@ -33,6 +33,8 @@ If you want to run this java application in your system then you need to take ca
    -> Criminal By Crime Type.<br>
    -> Crime in Month.<br>
    -> Criminal Case Status.<br>
+   -> All Case Details <br>
+   -> Update Case Status (Solved/Unsolved)<br>
 
 
 Table crimeDetails :
@@ -55,6 +57,7 @@ create table CriminalDetails<br>
     Age int not null,<br>
     Gender varchar(20) not null,<br>
     Identity varchar(50) not null<br>
+    CaseStatus varchar(15) <br>
 );
 
 Table CriminalByPoliceStation :
