@@ -26,44 +26,44 @@ If you want to run this java application in your system then you need to take ca
    
    Also we can see list of Both Crime and Criminal as per our Requirement.
    
-   Apart from these we can access information like as following
-   -> Criminal By Crime.
-   -> Criminal By Crime Place.
-   -> Criminal By Crime Type.
-   -> Crime in Month.
-   -> Criminal Case Status.
+   Apart from these we can access information like as following<br>
+   -> Criminal By Crime.<br>
+   -> Criminal By Crime Place.<br>
+   -> Criminal By Crime Type.<br>
+   -> Crime in Month.<br>
+   -> Criminal Case Status.<br>
 
 
 Table crimeDetails :
 ====================
-create crimeDetails (
-    CrimeId int primary key,
-    DateOfCrime varchar(20),
-    CrimePlace varchar(20),
-    CrimeType varchar(20),
-    CrimeDescription varchar(50),
-    Victims varchar(20)
+create crimeDetails <br>
+(<br>
+    CrimeId int primary key,<br>
+    DateOfCrime varchar(20),<br>
+    CrimePlace varchar(20),<br>
+    CrimeType varchar(20),<br>
+    CrimeDescription varchar(50),<br>
+    Victims varchar(20)<br>
 );
 
 Table Criminal :
 =====================
-create table CriminalDetails
- (
-    
-    CriminalName varchar(20) primary key,
-    Age int not null,
-    Gender varchar(20) not null,
-    Identity varchar(50) not null
-
+create table CriminalDetails<br>
+(<br>
+    CriminalName varchar(20) primary key,<br>
+    Age int not null,<br>
+    Gender varchar(20) not null,<br>
+    Identity varchar(50) not null<br>
 );
 
 Table CriminalByPoliceStatio :
 ==================
-create table CriminalByPoliceStation (
-	CrimeId int,
-	CriminalName varchar(20),
-	foreign key (CrimeId) references crimeDetails(CrimeId),
-    foreign key (CriminalName) references Bus(CriminalName)
+create table CriminalByPoliceStation <br>
+(<br>
+    CrimeId int,<br>
+    CriminalName varchar(20),<br>
+    foreign key (CrimeId) references crimeDetails(CrimeId),<br>
+    foreign key (CriminalName) references Bus(CriminalName)<br>
 );
 
 
