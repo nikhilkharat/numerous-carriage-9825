@@ -14,11 +14,11 @@ If you want to run this java application in your system then you need to take ca
 
 1) You need mySql install in your system.
 
-2) In Crime Investigation Management System I created two table which is
-   -> Crime Detail Table
-   -> Criminal Details Table
-   with the help of these two table I make 3rd Table which is
-   -> Criminal BY Police Station
+2) In Crime Investigation Management System I created two table which is<br>
+   -> Crime Detail Table<br>
+   -> Criminal Details Table<br>
+   with the help of these two table I make 3rd Table which is<br>
+   -> Criminal BY Police Station<br>
    
    We Can add Crime details information in Crime Table
    
