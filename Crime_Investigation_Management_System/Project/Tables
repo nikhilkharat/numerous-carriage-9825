@@ -1,0 +1,34 @@
+
+
+Table crimeDetails :
+====================
+create crimeDetails (
+    CrimeId int primary key,
+    DateOfCrime varchar(20),
+    CrimePlace varchar(20),
+    CrimeType varchar(20),
+    CrimeDescription varchar(50),
+    Victims varchar(20)
+);
+
+Table Criminal :
+=====================
+create table CriminalDetails
+ (
+    
+    CriminalName varchar(20) primary key,
+    Age int not null,
+    Gender varchar(20) not null,
+    Identity varchar(50) not null,
+    CaseStatus varchar(15) not null
+	CaseStatus varchar(15)
+);
+
+Table Booking :
+==================
+create CriminalNyPoliceStation (
+	CrimeId int,
+	CriminalName varchar(20),
+	foreign key (CrimeId) references crimeDetails(CrimeId),
+    foreign key (CriminalName) references Bus(CriminalName)
+);
