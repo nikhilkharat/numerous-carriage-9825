@@ -56,7 +56,7 @@ create table CriminalDetails<br>
     Identity varchar(50) not null<br>
 );
 
-Table CriminalByPoliceStatio :
+Table CriminalByPoliceStation :
 ==================
 create table CriminalByPoliceStation <br>
 (<br>
