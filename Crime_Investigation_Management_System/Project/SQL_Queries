@@ -23,7 +23,10 @@
 	"select * from criminalDetails where CriminalName=?"
 	"insert into criminalByPoliceStation values (?,?)"
 	
-	
+6. Update Case Status
+-> "update CriminalDetails SET CaseStatus='Solved'  where criminalName=?"
+
+
 (================CriminalDaoImpl=========================)
 
 1. Criminal By Crime
@@ -46,7 +49,12 @@ from CriminalByPoliceStation c INNER JOIN CrimeDetails cd ON c.crimeID=cd.CrimeI
 c.crimeID=cd.CrimeId group by MONTH(DateOfCrime) order by DateOfCrime asc");
 
 
-5.Criminal By Case Status
+5. Criminal By Case Status
 -> "select c.crimeID,c.CriminalName,cd.DateOfCrime,cd.CrimePlace,cd.CrimeType, cr.CaseStatus from CriminalByPoliceStation c INNER JOIN CrimeDetails cd INNER JOIN criminalDetails cr 
 ON c.crimeID=cd.CrimeId AND c.CriminalName=cr.CriminalName where CaseStatus=?"
 			
+
+6. Get all Details 
+-> select c.crimeID,c.CriminalName, cr.age, cr.gender, cr.Identity, cd.DateOfCrime, cd.CrimePlace, cd.CrimeType, cd.CrimeDescription, cd.Victims, cr.CaseStatus from CriminalByPoliceStation c
+ INNER JOIN CrimeDetails cd INNER JOIN criminalDetails cr ON c.crimeID=cd.CrimeId 
+ AND c.CriminalName=cr.CriminalName group by crimeID order by crimeID asc"		

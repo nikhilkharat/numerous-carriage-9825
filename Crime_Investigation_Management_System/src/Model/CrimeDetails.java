@@ -21,7 +21,7 @@ public class CrimeDetails {
 
 	public CrimeDetails(int crimeId, String dateOfCrime, String crimePlace, String crimeType, String crimeDescription,
 			String victims) {
-		super();
+		
 		CrimeId = crimeId;
 		DateOfCrime = dateOfCrime;
 		CrimePlace = crimePlace;

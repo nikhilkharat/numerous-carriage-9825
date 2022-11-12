@@ -17,6 +17,7 @@ public class CriminalByCrime {
 		
 		CriminalDao cdao= new CriminalDaoImpl();
 		
+		System.out.println(ConsoleColors.RED_BOLD+ConsoleColors.BANANA_YELLOW_BACKGROUND+"==========Criminal Details By Crime=========="+ConsoleColors.RESET);
 		try {
 			List<CriminalDet> dtoss= cdao.getAllCriminalByCrime();
 			dtoss.forEach(s->System.out.println(ConsoleColors.PURPLE_BOLD+s));

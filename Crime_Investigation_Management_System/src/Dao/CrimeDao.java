@@ -28,7 +28,7 @@ public interface CrimeDao {
 	
 	public String enrollCriminalCrime(int crimeID, String criminalName) throws CrimeException, SQLException;
 	
-
+	public String updateStatus(String  criminalName) throws CrimeException, SQLException;
 	
 }
 

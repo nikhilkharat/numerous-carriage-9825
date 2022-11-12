@@ -16,7 +16,7 @@ public class ListCrimeDetailsUC {
 		
 		CrimeDao dao= new CrimeDaoImpl();
 		
-		System.out.println("====Crime Details====");
+		System.out.println(ConsoleColors.RED_BOLD+ConsoleColors.BANANA_YELLOW_BACKGROUND+"==========Crime Details=========="+ConsoleColors.RESET);
 		try {
 			List<CrimeDetails> crimeDetails= dao.getAllCrimeDetails();
 			crimeDetails.forEach(s->System.out.println(ConsoleColors.RED +s));

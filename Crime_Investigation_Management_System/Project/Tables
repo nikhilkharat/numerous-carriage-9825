@@ -21,7 +21,7 @@ create table CriminalDetails
     Gender varchar(20) not null,
     Identity varchar(50) not null,
     CaseStatus varchar(15) not null
-
+	CaseStatus varchar(15)
 );
 
 Table Booking :

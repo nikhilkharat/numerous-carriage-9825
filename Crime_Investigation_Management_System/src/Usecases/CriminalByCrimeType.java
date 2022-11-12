@@ -19,6 +19,7 @@ public class CriminalByCrimeType {
 
 		CriminalDao cdao1= new CriminalDaoImpl();
 		
+		System.out.println(ConsoleColors.RED_BOLD+ConsoleColors.BANANA_YELLOW_BACKGROUND+"==========Crimininal By Crime Type=========="+ConsoleColors.RESET);
 		try {
 			List<CriminalDet> dtosss= cdao1. getAllCriminalByType(ctype);
 			dtosss.forEach(s->System.out.println(ConsoleColors.DARK_BLUE+s));

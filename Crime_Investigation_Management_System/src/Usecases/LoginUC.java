@@ -13,16 +13,16 @@ public static boolean AdminLogin() {
 		Scanner sc = new Scanner(System.in);
 		
 		
-		System.out.println(ConsoleColors.RED+"Welcome To NK Crimie Investigation Management System");
+		System.out.println(ConsoleColors.RED+"Welcome To Crime Investigation Management System");
 		
 		System.out.println(ConsoleColors.GREEN+"Please Login for Accessing a System");
 		
 		
 		
-		System.out.println(ConsoleColors.ORANGE +  "Enter username" + ConsoleColors.RESET);
+		System.out.println(ConsoleColors.ORANGE +  "Enter Officer Username" + ConsoleColors.RESET);
 		String username = sc.next();
 		
-		System.out.println(ConsoleColors.ORANGE + "Enter password" + ConsoleColors.RESET);
+		System.out.println(ConsoleColors.ORANGE + "Enter Officer Password" + ConsoleColors.RESET);
 		String password = sc.next();
 		
 		CrimeDao dao = new CrimeDaoImpl();

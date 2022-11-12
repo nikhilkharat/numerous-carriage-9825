@@ -8,6 +8,7 @@ import java.util.*;
 
 import Exception.CrimeException;
 import Model.CrimeDetails;
+import Model.CriminalDet;
 import Model.CriminalDetails;
 
 import Utility.DBUtil;
@@ -80,7 +81,7 @@ public class CrimeDaoImpl implements CrimeDao {
 		
 				
 				
-				CrimeDetails cd =new CrimeDetails(id, crimeDes, crimePlace, crimeType, crimeDes, victims);
+				CrimeDetails cd =new CrimeDetails(id, date, crimePlace, crimeType, crimeDes, victims);
 				crimeDetails.add(cd);
 				
 			}
@@ -210,6 +211,29 @@ public class CrimeDaoImpl implements CrimeDao {
 		return message;
 	}
 
+	@Override
+	public String updateStatus(String criminalName) throws CrimeException, SQLException {
+		// TODO Auto-generated method stub
+		String message = "Status not updated";
+		
+		try(Connection conn= DBUtil.provideConnection()){
+			PreparedStatement ps = conn.prepareStatement("update CriminalDetails SET CaseStatus='Solved'  where criminalName=?");
+			ps.setString(1, criminalName);
+			
+			int x = ps.executeUpdate();
+			if (x > 0) message = "Status successfully updated for customer Id : " + criminalName;
+			else
+				throw new CrimeException("Not Found");
+		}
+		catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			throw new CrimeException(e.getMessage());
+		}
+
+		return message;
+
+	}
 
 
 }
