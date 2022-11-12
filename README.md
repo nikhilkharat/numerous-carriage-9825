@@ -1,9 +1,10 @@
 # numerous-carriage-9825
-Crime Information Management System
+# Crime-Information-Management-System
+
 ![Logo](https://github.com/nikhilkharat/numerous-carriage-9825/blob/day-5/Crime_Investigation_Management_System/Images/gs_article_img_157183295712.jpg)
 
 
-# Crime-Information-Management-System
+
 The main aim of this system is to maintain and manage the detail information of the crime happened in  an  area under a particular police station. 
 This software could be used by the police officials in the Police station.
 
