@@ -36,16 +36,6 @@ If you want to run this java application in your system then you need to take ca
    -> All Case Details <br>
    -> Update Case Status (Solved/Unsolved)<br>
 
------------------------------------------------------------------
-| Field            | Type        | Null | Key | Default | Extra |
-------------------------------------------------------------------
-| CrimeId          | int         | NO   | PRI | NULL    |       |
-| DateOfCrime      | date        | YES  |     | NULL    |       |
-| CrimePlace       | varchar(15) | YES  |     | NULL    |       |
-| CrimeType        | varchar(15) | YES  |     | NULL    |       |
-| CrimeDescription | varchar(50) | YES  |     | NULL    |       |
-| Victims          | varchar(50) | YES  |     | NULL    |       |
------------------------------------------------------------------
 
 Table crimeDetails :
 ====================
