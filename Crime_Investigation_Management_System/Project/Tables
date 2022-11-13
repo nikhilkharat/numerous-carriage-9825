@@ -24,9 +24,9 @@ create table CriminalDetails
 	CaseStatus varchar(15)
 );
 
-Table Booking :
+Table CriminalByPoliceStation
 ==================
-create CriminalNyPoliceStation (
+create CriminalByPoliceStation (
 	CrimeId int,
 	CriminalName varchar(20),
 	foreign key (CrimeId) references crimeDetails(CrimeId),
