@@ -43,7 +43,7 @@ If you want to run this java application in your system then you need to take ca
 </br>
 *Criminal By Police Station as linking between Crime and Criminal*
 </br>
-![Er diagram]()
+![Er diagram](https://github.com/nikhilkharat/numerous-carriage-9825/blob/main/Crime_Investigation_Management_System/Project/Table%20Relation.png)
 
 
 Table crimeDetails :
