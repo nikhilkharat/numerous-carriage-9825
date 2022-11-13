@@ -39,7 +39,7 @@ If you want to run this java application in your system then you need to take ca
 # Overview of my work
 
 ## **ER Diagram**
-*Crime and Criminal has many to many relationship*
+*Crime Details and Criminal Details has many to many relationship*
 </br>
 *Criminal By Police Station as linking between Crime and Criminal*
 </br>
