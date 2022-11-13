@@ -36,6 +36,15 @@ If you want to run this java application in your system then you need to take ca
    -> All Case Details <br>
    -> Update Case Status (Solved/Unsolved)<br>
 
+# Overview of my work
+
+## **ER Diagram**
+*Crime and Criminal has many to many relationship*
+</br>
+*Criminal By Police Station as linking between Crime and Criminal*
+</br>
+![Er diagram]()
+
 
 Table crimeDetails :
 ====================
