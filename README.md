@@ -36,6 +36,16 @@ If you want to run this java application in your system then you need to take ca
    -> All Case Details <br>
    -> Update Case Status (Solved/Unsolved)<br>
 
+-----------------------------------------------------------------
+| Field            | Type        | Null | Key | Default | Extra |
+------------------------------------------------------------------
+| CrimeId          | int         | NO   | PRI | NULL    |       |
+| DateOfCrime      | date        | YES  |     | NULL    |       |
+| CrimePlace       | varchar(15) | YES  |     | NULL    |       |
+| CrimeType        | varchar(15) | YES  |     | NULL    |       |
+| CrimeDescription | varchar(50) | YES  |     | NULL    |       |
+| Victims          | varchar(50) | YES  |     | NULL    |       |
+-----------------------------------------------------------------
 
 Table crimeDetails :
 ====================
@@ -72,3 +82,28 @@ create table CriminalByPoliceStation <br>
 
 
 For accessing the database as Admin use Username: "Admin" and Password: "1234"
+
+# 👉 [Click here](https://drive.google.com/file/d/1kKWC5dUw0bd2ESU9o_2k4L9_i6JaqKXS/view) to go through detail explanation of this application 
+
+
+# Technology used 
+
+- Java
+- MySQL
+- Git & GitHub
+
+# Lessons Learned
+
+- Gain excessive knowledge on application of Java and MySQL.
+- Enjoyed the process of learning and creating the application.
+
+
+# Feedback
+> Valuable feedback will be appreciated.
+> You can reach out to me via below medium.
+
+- [Email](nikhil.kharat8a@gmail.com)
+- [Linkedin](https://www.linkedin.com/in/nikhil-kharat-872608109)
+# Contributor
+#### Nikhil Kharat
+>[GitHub](https://github.com/nikhilkharat)
