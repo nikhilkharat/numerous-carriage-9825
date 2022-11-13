@@ -98,7 +98,6 @@ create table CriminalByPoliceStation <br>
 > Valuable feedback will be appreciated.
 > You can reach out to me via below medium.
 
-- [Email](nikhil.kharat8@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/nikhil-kharat-872608109)
 # Contributor
 #### Nikhil Kharat
