@@ -50,37 +50,34 @@ Table crimeDetails :
 ====================
 create crimeDetails <br>
 (<br>
-    CrimeId int primary key,<br>
-    DateOfCrime varchar(20),<br>
-    CrimePlace varchar(20),<br>
-    CrimeType varchar(20),<br>
-    CrimeDescription varchar(50),<br>
-    Victims varchar(20)<br>
+    CrimeId int primary key not null,<br>
+    DateOfCrime varchar(20) not null,<br>
+    CrimePlace varchar(20) not null,<br>
+    CrimeType varchar(20) not null,<br>
+    CrimeDescription varchar(50) not null,<br>
+    Victims varchar(20) not null<br>
 );
 
 Table Criminal :
 =====================
 create table CriminalDetails<br>
 (<br>
-    CriminalName varchar(20) primary key,<br>
+    CriminalName varchar(20) primary key not null,<br>
     Age int not null,<br>
     Gender varchar(20) not null,<br>
-    Identity varchar(50) not null<br>
-    CaseStatus varchar(15) <br>
+    Identity varchar(50) not null,<br>
+    CaseStatus varchar(15)not null <br>
 );
 
 Table CriminalByPoliceStation :
 ==================
 create table CriminalByPoliceStation <br>
 (<br>
-    CrimeId int,<br>
-    CriminalName varchar(20),<br>
+    CrimeId int not null,<br>
+    CriminalName varchar(20) not null,<br>
     foreign key (CrimeId) references crimeDetails(CrimeId),<br>
     foreign key (CriminalName) references Bus(CriminalName)<br>
 );
-
-
-For accessing the database as Admin use Username: "Admin" and Password: "1234"
 
 # 👉 [Click here](https://drive.google.com/file/d/1kKWC5dUw0bd2ESU9o_2k4L9_i6JaqKXS/view) to go through detail explanation of this application 
 
@@ -101,8 +98,10 @@ For accessing the database as Admin use Username: "Admin" and Password: "1234"
 > Valuable feedback will be appreciated.
 > You can reach out to me via below medium.
 
-- [Email](nikhil.kharat8a@gmail.com)
+- [Email](nikhil.kharat8@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/nikhil-kharat-872608109)
 # Contributor
 #### Nikhil Kharat
 >[GitHub](https://github.com/nikhilkharat)
+
+For accessing the database as Admin use Username: "Admin" and Password: "1234"
