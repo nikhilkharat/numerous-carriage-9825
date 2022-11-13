@@ -79,7 +79,7 @@ create table CriminalByPoliceStation <br>
     foreign key (CriminalName) references Bus(CriminalName)<br>
 );
 
-# 👉 [Click here](https://drive.google.com/file/d/1kKWC5dUw0bd2ESU9o_2k4L9_i6JaqKXS/view) to go through detail explanation of this application 
+# 👉 [Click here](https://drive.google.com/drive/folders/1JwnBdND9C8S64GmKlAGUkVsOOgxlvpZW) to go through detail explanation of this application 
 
 
 # Technology used 
