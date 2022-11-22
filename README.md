@@ -103,6 +103,6 @@ create table CriminalByPoliceStation <br>
 #### Nikhil Kharat
 >[GitHub](https://github.com/nikhilkharat)
 
-# 👉 [Click here](https://github.com/nikhilkharat/numerous-carriage-9825/blob/main/Crime_Investigation_Management_System/Project/Crime%20System.pptx) to go Presentation of this application 
+# 👉 [Click here](https://docs.google.com/presentation/d/1Z8wtgz0syeBOkK0UTrm1yQZP1ZCRIaFD/edit?usp=sharing&ouid=104452950514497374248&rtpof=true&sd=true) to go Presentation of this application 
 
 For accessing the database as Admin use Username: "Admin" and Password: "1234"
