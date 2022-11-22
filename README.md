@@ -79,7 +79,7 @@ create table CriminalByPoliceStation <br>
     foreign key (CriminalName) references Bus(CriminalName)<br>
 );
 
-# 👉 [Click here](https://drive.google.com/drive/folders/1JwnBdND9C8S64GmKlAGUkVsOOgxlvpZW) to go through detail explanation of this application 
+# 👉 [Click here](https://drive.google.com/drive/folders/1JwnBdND9C8S64GmKlAGUkVsOOgxlvpZW) to go Video explanation of this application 
 
 
 # Technology used 
@@ -102,5 +102,7 @@ create table CriminalByPoliceStation <br>
 # Contributor
 #### Nikhil Kharat
 >[GitHub](https://github.com/nikhilkharat)
+
+# 👉 [Click here](https://github.com/nikhilkharat/numerous-carriage-9825/blob/main/Crime_Investigation_Management_System/Project/Crime%20System.pptx) to go Presentation of this application 
 
 For accessing the database as Admin use Username: "Admin" and Password: "1234"
